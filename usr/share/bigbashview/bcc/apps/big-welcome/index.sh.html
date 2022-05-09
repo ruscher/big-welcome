@@ -1,0 +1,211 @@
+#!/bin/bash
+
+#Translation
+export TEXTDOMAINDIR="/usr/share/locale"
+export TEXTDOMAIN=big-welcome
+
+# Don't group windows
+xprop -id "$(xprop -root '\t$0' _NET_ACTIVE_WINDOW | cut -f 2)" -f WM_CLASS 8s -set WM_CLASS "$$"
+
+FOLDER_CONFIG="$HOME/.config/big-welcome"
+mkdir -p ~/.config/big-welcome
+
+cat << EOF
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bem vindo ao BigLinux</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <div id="wizard" class="wizard">
+    <div class="wizard__content">
+      <header class="wizard__header">
+        <div class="wizard__header-overlay"></div>
+
+        <div class="wizard__header-content">
+          <h1 class="wizard__title" >Bem vindo ao BigLinux</h1>
+          <p class="wizard__subheading">Comece com <span>04</span> etapas simples.</p>
+        </div>
+
+        <div class="wizard__steps">
+          <nav class="steps">
+<!-- NAV BIG LINUX START -->
+            <div class="step">
+              <div class="step__content">
+                <p class="step__number"><svg viewBox="0 0 576 512" style="width:26px; margin-top:10px;"><path fill="currentcolor" d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z"/></svg></p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+
+                <div class="lines">
+                  <div class="line -start"></div>
+                  <div class="line -bigscreen01"></div>
+                  <div class="line -bigscreen02"></div>
+                  <div class="line -bigscreen03"></div>
+                </div>  
+              </div>
+            </div>
+<!-- NAV BIG LINUX 01 -->
+            <div class="step">
+              <div class="step__content">
+                <p class="step__number"><svg viewBox="0 0 496 512" style="width:26px; margin-top:7px;"><path fill="currentcolor" d="M347.94 129.86L203.6 195.83a31.938 31.938 0 0 0-15.77 15.77l-65.97 144.34c-7.61 16.65 9.54 33.81 26.2 26.2l144.34-65.97a31.938 31.938 0 0 0 15.77-15.77l65.97-144.34c7.61-16.66-9.54-33.81-26.2-26.2zm-77.36 148.72c-12.47 12.47-32.69 12.47-45.16 0-12.47-12.47-12.47-32.69 0-45.16 12.47-12.47 32.69-12.47 45.16 0 12.47 12.47 12.47 32.69 0 45.16zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 448c-110.28 0-200-89.72-200-200S137.72 56 248 56s200 89.72 200 200-89.72 200-200 200z"/></svg></p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+
+                <div class="lines">
+                  <div class="line -bigscreen01"></div>
+                  <div class="line -bigscreen02"></div>
+                  <div class="line -bigscreen03"></div>
+                </div> 
+              </div>
+            </div>
+<!-- NAV BIG LINUX 02 -->
+            <div class="step">
+              <div class="step__content">
+                <p class="step__number"><svg viewBox="0 0 496 512" style="width:26px; margin-top:7px;"><path fill="currentcolor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg></p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+
+                <div class="lines">
+                  <div class="line -bigscreen01"></div>
+                  <div class="line -bigscreen02"></div>
+                  <div class="line -bigscreen03"></div>
+                </div> 
+              </div>
+            </div>
+<!-- NAV BIG LINUX 03 -->
+            <div class="step">
+              <div class="step__content">
+                <p class="step__number"><svg viewBox="0 0 576 512" style="width:26px; margin-top:7px;"><path fill="currentcolor" d="M271.06,144.3l54.27,14.3a8.59,8.59,0,0,1,6.63,8.1c0,4.6-4.09,8.4-9.12,8.4h-35.6a30,30,0,0,1-11.19-2.2c-5.24-2.2-11.28-1.7-15.3,2l-19,17.5a11.68,11.68,0,0,0-2.25,2.66,11.42,11.42,0,0,0,3.88,15.74,83.77,83.77,0,0,0,34.51,11.5V240c0,8.8,7.83,16,17.37,16h17.37c9.55,0,17.38-7.2,17.38-16V222.4c32.93-3.6,57.84-31,53.5-63-3.15-23-22.46-41.3-46.56-47.7L282.68,97.4a8.59,8.59,0,0,1-6.63-8.1c0-4.6,4.09-8.4,9.12-8.4h35.6A30,30,0,0,1,332,83.1c5.23,2.2,11.28,1.7,15.3-2l19-17.5A11.31,11.31,0,0,0,368.47,61a11.43,11.43,0,0,0-3.84-15.78,83.82,83.82,0,0,0-34.52-11.5V16c0-8.8-7.82-16-17.37-16H295.37C285.82,0,278,7.2,278,16V33.6c-32.89,3.6-57.85,31-53.51,63C227.63,119.6,247,137.9,271.06,144.3ZM565.27,328.1c-11.8-10.7-30.2-10-42.6,0L430.27,402a63.64,63.64,0,0,1-40,14H272a16,16,0,0,1,0-32h78.29c15.9,0,30.71-10.9,33.25-26.6a31.2,31.2,0,0,0,.46-5.46A32,32,0,0,0,352,320H192a117.66,117.66,0,0,0-74.1,26.29L71.4,384H16A16,16,0,0,0,0,400v96a16,16,0,0,0,16,16H372.77a64,64,0,0,0,40-14L564,377a32,32,0,0,0,1.28-48.9Z"/></svg></p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+
+                <div class="lines">
+                  <div class="line -bigscreen01"></div>
+                  <div class="line -bigscreen02"></div>
+                  <div class="line -bigscreen03"></div>
+                </div> 
+              </div>
+            </div>
+<!-- NAV BIG LINUX 04 -->            
+            <div class="step">
+              <div class="step__content">
+                <p class="step__number"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:26px; margin-top:5px;"><path fill="currentcolor" d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg></p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+
+                <div class="lines">
+                  <div class="line -bigscreen01"></div>
+                  <div class="line -bigscreen02"></div>
+                  <div class="line -bigscreen03"></div>
+                </div> 
+              </div>
+            </div> 
+
+          </nav>
+        </div>
+      </header>
+
+<!-- BIG LINUX START -->
+      <div class="panels">
+        
+        <div class="panel">
+          <header class="panel__header">
+            <h2 class="panel__title">Esolha a Aparência do seu BigLinux</h2>
+            <p class="panel__subheading">Disponiblizamos configurações completas para você selecionar de forma extremamente simples.</p>
+          </header>
+
+          <p class="panel__content">
+            <div class="app-card-buttons" >
+                <button class="content-button status-button" onclick="_run('./run.run biglinux-themes-gui')">Abrir</button>
+            </div>
+          </p>
+
+        </div>
+<!-- BIG LINUX 01 -->
+        <div class="panel">
+          <header class="panel__header">
+            <h2 class="panel__title">Escolha seu navegador padrão</h2>
+            <p class="panel__subheading">Defina seus programas padrões.</p>
+          </header>
+
+          <p class="panel__content">
+            <div class="app-card-buttons" >
+                <button class="content-button status-button" onclick="_run('./run.run kcmshell5 kcm_componentchooser')">Abrir</button>
+            </div>
+          </p>
+        </div>
+<!-- BIG LINUX 02 -->
+        <div class="panel">
+          <header class="panel__header">
+            <h2 class="panel__title">Usuários</h2>
+            <p class="panel__subheading">Crie, remova e gerencie suas contas e grupos de usuários.</p>
+          </header>
+
+          <p class="panel__content">
+            <div class="app-card-buttons" >
+                <button class="content-button status-button" onclick="_run('./run.run manjaro-settings-manager -m msm_users')">Abrir</button>
+            </div>
+          </p>
+        </div>
+<!-- BIG LINUX 03 -->
+        <div class="panel">
+          <header class="panel__header">
+            <h2 class="panel__title">Doação</h2>
+            <p class="panel__subheading">Sua doação é muito importante para o projeto, todos os participantes do projeto BigLinux ficam muito gratos pela contribuição.</p>
+          </header>
+
+          <p class="panel__content">
+            <div class="app-card-buttons" >
+                <button class="content-button status-button" onclick="_run('./url.run')">Abrir</button>
+            </div>
+          </p>
+        </div>
+<!-- BIG LINUX 04 -->
+        <div class="panel">
+          <header class="panel__header">
+            <h2 class="panel__title">Conheça alguns recursos</h2>
+            <p class="panel__subheading">Nosso sistema é colaborativo, conheça nosso fórum e venha fazer parte dessa evolução. Confira as novidades!</p>
+          </header>
+
+          <p class="panel__content">Central de Controle, Big info, OCR para PDF, Restaurar Configurações, Instalador de Drivers, Redutor de Ruídos, Snapshots e backups, Visual do Desktop, Big Store, Sistema de Arquivos BTRFS, Fala texto e Web Apps.</p> 
+        </div>
+      </div>
+
+      <div class="wizard__footer">
+        <button class="button previous">Anterior</button>
+        <button class="button next">Próxima</button>
+          <div class="logo">
+            <a href="#"><img src="logo-big-trans-branco.png" alt=""></a>
+          </div>
+      </div>
+    </div>
+
+    <h1 class="wizard__congrats-message" styles="color: #fff;">
+      Parabéns, você concluiu os primeiros passo para utilizar o BigLinux.
+    </h1>
+  </div>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
+EOF
+
+IFS=$OIFS
