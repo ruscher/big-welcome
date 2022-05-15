@@ -1,3 +1,111 @@
+:root {
+    --body-bg-color: #3d4550;
+    --theme-bg-color: rgba(16 18 27 / 40%);
+    --border-color: rgba(113 119 144 / 25%);
+    --theme-color: #f9fafb;
+    --inactive-color: rgb(113 119 144 / 78%);
+    --hover-menu-bg: rgba(12 15 25 / 30%);
+    --content-title-color: #797e84;
+    --content-bg: rgb(146 151 179 / 13%);
+    --button-inactive: rgb(249 250 251 / 55%);
+    --border-card-color: rgb(70 70 70);
+    --dropdown-bg: #21242d;
+    --dropdown-hover: rgb(42 46 60);
+    --popup-bg: rgb(22 25 37);
+    --subtitle-bg: rgb(0 102 153);
+    --search-bg: rgb(255 255 255 / 8%);
+    --overlay-bg: rgba(36, 39, 59, 0.3);
+    --scrollbar-bg: #428bff;
+    --border-box: #777;
+    --shador-color-icons: rgb(79 79 79 / 100%);
+    --subtitle: rgb(255 255 255 / 100%);
+    --search-color: rgb(155 155 155 / 100%);
+    --search-color-over: #fff;
+    --footer-bg-color: #2a303a;
+    --box-color-shadow-01: rgba(0, 0, 0, 0.2);
+    --text-a-color: #ccc;
+}
+
+
+.box-items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    display: inline-table;
+}
+
+.box-imagem-icon {
+    color: #4285f4;
+    height: 64px;
+    width: 64px;
+    filter: drop-shadow(0px 0px 2px var(--shador-color-icons));
+}
+
+.box-geral-icons {
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 190px;
+    height: 150px;
+}
+
+.box-geral-button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 16px;
+    width: 220px;
+    height: 150px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-align: -webkit-center;
+}
+.box-items .box-geral-icons:hover:hover {
+    transform: scale(1.02);
+    background-color: var(--theme-bg-color);
+}
+
+.box-items .box-geral-icons:hover {
+    background: #e0e0e0;
+    text-decoration: none;
+    flex-direction: column;
+    width: calc(110% - 20px);
+    background-color: var(--content-bg);
+    border-radius: 14px;
+    box-shadow: 0px 0px 1px 1px var(--border-box);
+    cursor: pointer;
+    transition: 0.3s ease;
+    padding: 16px;
+    width: 220px;
+    height: 150px;
+}
+.box-items .box-geral-icons:active:active {
+  background-color: var(--theme-bg-color);
+  border-radius: 14px;
+  box-shadow: 0px 0px 1px 1px var(--border-box);
+}
+.box-items .box-geral-icons:visited:visited {
+  background-color: var(--theme-bg-color);
+  border-radius: 14px;
+  box-shadow: 0px 0px 1px 1px var(--border-box);
+}
+.box-items .box-geral-icons:focus:focus {
+  background-color: var(--theme-bg-color);
+  border-radius: 14px;
+  box-shadow: 0px 0px 1px 1px var(--border-box);
+}
+
+.box-titulo {
+    width: 200px;
+    padding-top: 6px;
+    text-align: center;
+}
+
 /*$background-url: 'https://www.biglinux.com.br/wp-content/uploads/2022/03/Big-Linux-for-Download.jpeg';*/
 /* LOGO */
 .logo {
@@ -26,20 +134,23 @@
 body, html {
   padding: 0;
   margin: 0;
-  background: #3d4550;
+  /*background: #3d4550;*/
   font-family: "Lato", sans-serif;
   color: #3d4550;
 }
 
 .wrapper {
   position: relative;
-  max-width: 1080px;
-  margin: 50px auto;
+  /*max-width: 1080px;*/
+  max-width: 100%;
+  margin: 0px auto;
 }
 
 .wizard {
-  max-width: 620px;
-  margin: 0 auto;
+/*  max-width: 620px;
+  margin: 0 auto;*/
+    max-width: 100%;
+    margin: 0 auto;
 }
 .wizard__header {
   position: relative;
@@ -57,13 +168,14 @@ body, html {
   background-size: cover;
 }
 .wizard__header-content {
-  position: absolute;
-  width: 100%;
-  padding: 0 50px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
+    position: absolute;
+    width: 99%;
+    padding: 0;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid red;*/
 }
 .wizard__header-overlay {
   position: absolute;
@@ -71,15 +183,17 @@ body, html {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(16, 18, 27, 0.6);
+  /*background: rgba(16, 18, 27, 0.6);*/
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  /*background-image: url(texture/cubes.png), linear-gradient(to right top, #185a9d, #43cea2);*/
+  background-image: url(texture/cubes.png), linear-gradient(to right top, #24C6DC, #514A9D);
 }
 .wizard__title {
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 20px;
-  text-align: left;
+  text-align: center;
 }
 .wizard__subheading {
   /*text-transform: uppercase;*/
@@ -88,7 +202,7 @@ body, html {
   font-weight: 100px;
   letter-spacing: 2px;
   margin: 20px;
-  text-align: left;
+  text-align: center;
 }
 .wizard__subheading span {
   font-weight: 600;
@@ -104,12 +218,14 @@ body, html {
 .wizard__footer {
   padding: 0 50px 60px;
   border-radius: 15px;
+  text-align: center;
 }
 .wizard__content {
   background: rgba(16, 18, 27, 0.4);
   color: #fff;
   /*box-shadow: 0px 0px 10px #c5c5c5;*/
   border-radius: 15px;
+  height: 100vh;
 }
 .wizard__congrats-message {
   color: #fff;
@@ -119,6 +235,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
+  z-index: -1;
 }
 .wizard.completed .wizard__content {
   animation: gettingOut 2s cubic-bezier(1, -0.71, 1, 1.16) forwards;
@@ -168,6 +285,7 @@ body, html {
 .panels {
   position: relative;
   overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 .panel {
@@ -191,13 +309,24 @@ body, html {
   margin: 0;
 }
 .panel.movingOutBackward {
-  transform: translateX(-620px);
+  transform: translateY(-100%);
+  display: block;
+  position: absolute;
+  transition: all 0.5s ease;
 }
 .panel.movingOutFoward {
-  transform: translateX(620px);
+  transform: translateX(-100%);
+  display: block;
+  position: absolute;
+  transition: all 0.5s ease;
 }
 .panel.movingIn {
   transform: translateX(0);
+  /*width: 100%;*/
+  display: block;
+  position: inherit;
+  transition: all 0.5s ease;
+  text-align: center;
 }
 
 .steps {

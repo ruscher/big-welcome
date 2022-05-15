@@ -55,7 +55,7 @@ class Panels {
   }
 
   updatePanelsContainerHeight() {
-    this.panelsContainer.style.height = this.getCurrentPanelHeight();
+//     this.panelsContainer.style.height = this.getCurrentPanelHeight();
   }
 
   updatePanelsPosition(currentStep) {
