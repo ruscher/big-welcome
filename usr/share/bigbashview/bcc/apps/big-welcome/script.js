@@ -1,3 +1,18 @@
+
+$(document).ready(function(){
+    // Set div display to none
+    $(".hide-btn").click(function(){
+        $("#myDivbrave").css("display", "block");
+        $("#myDivfire").css("display", "none");
+    });
+    
+    // Set div display to block
+    $(".show-btn").click(function(){
+        $("#myDivbrave").css("display", "none");
+        $("#myDivfire").css("display", "block");
+    });
+});
+
 class Steps {
   constructor(wizard) {
     this.wizard = wizard;
@@ -168,3 +183,4 @@ let buttonNext = document.querySelector('.next');
 let buttonPrevious = document.querySelector('.previous');
 
 wizard.addControls(buttonPrevious, buttonNext);
+

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-xdg-open https://www.biglinux.com.br/doacao-financeira/
+xdg-open $*
