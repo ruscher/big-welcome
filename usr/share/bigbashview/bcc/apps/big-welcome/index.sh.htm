@@ -245,8 +245,43 @@ echo '<!DOCTYPE html>
               <div class="box-titulo">'$"Aparência, desempenho e usabilidade"'</div>
           </button>
         </div>          
-        
-      </div>
+
+<div id="login-tab-content" class="fc-card active">
+        <div id="desc">
+              <h4 style="margin: 15px 0 15px 0;">Usabilidade</h4>
+
+              <ul>
+                <li style="padding: 2px;" onchange="_run('./kwin_button.run')">
+                  
+                    <input id="desktop1" name="bb1" type="checkbox" class="switch" style="display: inline-block; float: left;" $checked_left_button>
+                    <span for="desktop1">Botões da janela no lado esquerdo<br><small></small></span>
+                  
+                </li>                    
+                <li style="padding-top: 2px;" onchange="_run('./mouse.run')">
+                  
+                    <input id="desktop2" type="checkbox" class="switch" style="display: inline-block; float: left;" $checked_scrool_natural>
+                    <span for="desktop2">Rolagem do mouse invertida<br><small></small></span>
+                  
+                </li> 
+              </ul>
+              <ul>
+                <li style="padding: 2px;" onchange="_run('./search.run')">
+                  
+                    <input id="desktop3" type="checkbox" class="switch" style="display: inline-block; float: left;" $checked_search>
+                    <span for="desktop3">Pesquisar arquivos<br><small></small></span>
+                  
+                </li>                    
+                <li style="padding-top: 2px;" onchange="_run('./lock-desktop.run')">
+                  
+                    <input id="desktop4" type="checkbox" class="switch" style="display: inline-block; float: left;" $checked_lock_desktop>
+                    <span for="desktop4">Bloquear a área de trabalho<br><small></small></span>
+                  
+                </li>                    
+              </ul>
+
+            </div>                  
+      </div>                 
+</div>
 <!-- BIG LINUX 01 -->
       <div class="panel">
         <header class="panel__header">
@@ -350,7 +385,6 @@ echo 'Firefox</div>
           <h2 class="panel__title">'$"KDE Connect no BigLinux"'</h2>
           <p class="panel__subheading">'$"O KDE Connect é um aplicativo que facilita as comunicações sem fio e a transferência de dados entre dispositivos em redes locais. Disponível na Google Play Store para Android e Apple Store para iPhone."'</p>
         </header>
-       
         <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="">
           <button onclick="_run(`./run.run kcmshell5 kdeconnect`)" id="box-subtitle" class="box-geral-icons box-geral-button"> 
               <div class="box-imagem-icon"><img class="box-imagem-icon" src="icons/kdeconnect.png"></div>
@@ -358,6 +392,13 @@ echo 'Firefox</div>
               
           </button>
         </div>
+        <br>
+            <div class="box-1 box-2 box-3 box-4 box-5 box-items app-store-qr">
+              <a href="#" onclick="_run(`./url.run https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp`)"><img src="img/kde-connect-playstore-qrcode.svg" style="background: #fff; width: 150px;"></a>
+            </div>
+            <div class="box-1 box-2 box-3 box-4 box-5 box-items app-store-qr">
+              <a href="#" onclick="_run(`./url.run https://apps.apple.com/app/kde-connect/id1580245991`)"><img src="img/kde-connect-appstore-qrcode.svg" style="background: #fff; width: 150px;"></a>
+            </div>
       </div>
 <!-- NAV BIG LINUX 06 -->
       <div class="panel">
