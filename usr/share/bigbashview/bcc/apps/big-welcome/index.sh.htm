@@ -248,33 +248,19 @@ echo '<!DOCTYPE html>
 
 <div id="login-tab-content" class="fc-card active">
         <div id="desc">
-              <h4 style="margin: 15px 0 15px 0;">Usabilidade</h4>
+              <h4 style="margin: 15px 0 15px 0;">'$"Usabilidade"'</h4>
 
               <ul>
-                <li style="padding: 2px;" onchange="_run('./kwin_button.run')">
-                  
-                    <input id="desktop1" name="bb1" type="checkbox" class="switch" style="display: inline-block; float: left;" $checked_left_button>
-                    <span for="desktop1">Botões da janela no lado esquerdo<br><small></small></span>
-                  
-                </li>                    
                 <li style="padding-top: 2px;" onchange="_run('./mouse.run')">
                   
                     <input id="desktop2" type="checkbox" class="switch" style="display: inline-block; float: left;" $checked_scrool_natural>
-                    <span for="desktop2">Rolagem do mouse invertida<br><small></small></span>
+                    <span for="desktop2">'$"Rolagem do mouse invertida"'<br><small></small></span>
                   
                 </li> 
-              </ul>
-              <ul>
-                <li style="padding: 2px;" onchange="_run('./search.run')">
-                  
-                    <input id="desktop3" type="checkbox" class="switch" style="display: inline-block; float: left;" $checked_search>
-                    <span for="desktop3">Pesquisar arquivos<br><small></small></span>
-                  
-                </li>                    
                 <li style="padding-top: 2px;" onchange="_run('./lock-desktop.run')">
                   
                     <input id="desktop4" type="checkbox" class="switch" style="display: inline-block; float: left;" $checked_lock_desktop>
-                    <span for="desktop4">Bloquear a área de trabalho<br><small></small></span>
+                    <span for="desktop4">'$"Bloquear a área de trabalho"'<br><small></small></span>
                   
                 </li>                    
               </ul>
