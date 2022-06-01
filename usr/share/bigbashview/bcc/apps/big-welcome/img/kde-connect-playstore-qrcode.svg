@@ -26,7 +26,7 @@
      units="px"
      width="480px"
      inkscape:zoom="0.52047249"
-     inkscape:cx="405.40087"
+     inkscape:cx="404.4402"
      inkscape:cy="453.43415"
      inkscape:window-width="2560"
      inkscape:window-height="1003"
@@ -40,6 +40,14 @@
      inkscape:label="Camada 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.258475"
+       id="rect1289"
+       width="126.56528"
+       height="156.29274"
+       x="-128.99983"
+       y="-157.45497"
+       transform="scale(-1)" />
     <g
        id="g32920"
        transform="translate(-0.67124891,0.05833998)">
