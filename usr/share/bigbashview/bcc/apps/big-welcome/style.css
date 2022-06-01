@@ -233,7 +233,7 @@ body, html {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   /*background-image: url(texture/cubes.png), linear-gradient(to right top, #185a9d, #43cea2);*/
-  background-image: url(texture/escheresque.png), linear-gradient(to right top, #185a9d, #514A9D);
+  background-image: url(texture/escheresque.png), linear-gradient(to right top, #0086ca, #000046);
 }
 .wizard__title {
   font-size: 1.5rem;
