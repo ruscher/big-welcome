@@ -36,7 +36,11 @@
   margin-top: -26px;
   margin-left: 122px;
 }
-
+#myDivchrome{
+  position: absolute;
+  margin-top: -26px;
+  margin-left: 122px;
+}
 
 .box-items {
     align-items: center;
