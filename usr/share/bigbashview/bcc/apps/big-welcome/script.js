@@ -4,12 +4,20 @@ $(document).ready(function(){
     $(".hide-btn").click(function(){
         $("#myDivbrave").css("display", "block");
         $("#myDivfire").css("display", "none");
+        $("#myDivchrome").css("display", "none");
     });
     
     // Set div display to block
     $(".show-btn").click(function(){
         $("#myDivbrave").css("display", "none");
         $("#myDivfire").css("display", "block");
+        $("#myDivchrome").css("display", "none");
+    });
+    // Set div display to block
+    $(".show-chrome").click(function(){
+        $("#myDivbrave").css("display", "none");
+        $("#myDivfire").css("display", "none");
+        $("#myDivchrome").css("display", "block");
     });
 });
 
