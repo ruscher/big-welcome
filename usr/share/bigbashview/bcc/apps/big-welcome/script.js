@@ -1,4 +1,21 @@
 
+$(document).ready(function() {
+var pageRefresh = 5000; //5 s
+    setInterval(function() {
+        refresh();
+    }, pageRefresh);
+});
+
+// Functions
+
+function refresh() {
+    //$('#DivBrowserRefresh').load(location.href + " #DivBrowserRefresh");
+    //$('#DivBrowserRefresh').load();
+    $("#DivBrowserRefresh").load(location.href+" #myDiv *","");
+    $("#DivBrowserRefresh").load(location.href+" #DivBrowserRefresh>*","");
+}
+
+
 $(document).ready(function(){
     // Set div display to Brave
     $(".show-brave").click(function(){
