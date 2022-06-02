@@ -47,7 +47,7 @@ $(document).ready(function(){
         $("#myDivopera").css("display", "none");
     });
     // Set div display Opera
-    $(".show-vivaldi").click(function(){
+    $(".show-opera").click(function(){
         $("#myDivbrave").css("display", "none");
         $("#myDivfire").css("display", "none");
         $("#myDivchrome").css("display", "none");
