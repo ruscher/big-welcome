@@ -264,9 +264,9 @@ echo '<!DOCTYPE html>
         </header>
         <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="">
           <!-- <button onclick="_run(`./run-browser.run brave-browser.desktop`)" id="box-subtitle" type="button" class="box-geral-icons box-geral-button show-brave"> -->
-          <button type="button" class="box-geral-icons box-geral-button hide-btn" onclick="_run(`./run-browser.run brave-browser.desktop`)">
+          <button type="button" class="box-geral-icons box-geral-button show-brave" onclick="_run(`./run-browser.run brave-browser.desktop`)">
           
-              <div class="box-imagem-icon"><img class="box-imagem-icon" src="icons/brave.png"></div>
+              <div class="box-imagem-icon"><img class="box-imagem-icon" src="icons/brave.png" title="Brave" alt="Brave"></div>
 
               <div class="box-titulo">'
 DEFAULTWEB=$(xdg-settings get default-web-browser)
@@ -285,7 +285,7 @@ echo 'Brave</div>
         
         
         <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="">
-          <button type="button" class="box-geral-icons box-geral-button show-btn" id="box-subtitle" onclick="_run(`./run-browser.run firefox.desktop`)">
+          <button type="button" class="box-geral-icons box-geral-button show-fire" id="box-subtitle" onclick="_run(`./run-browser.run firefox.desktop`)">
               <div class="box-imagem-icon"><img class="box-imagem-icon" src="icons/firefox.png" title="Firefox" alt="Firefox"></div>
               <div class="box-titulo">'
 DEFAULTWEB=$(xdg-settings get default-web-browser)
@@ -319,13 +319,73 @@ echo '        <div id="myDivchrome" style="display:none;"><svg xmlns="http://www
 echo 'Google Chrome</div>
           </button>
         </div>'
+fi       
+
+if [ -f /usr/bin/chromium ];then
+echo '
+        <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="">
+          <button type="button" class="box-geral-icons box-geral-button show-chromium" id="box-subtitle" onclick="_run(`./run-browser.run chromium.desktop`)">
+              <div class="box-imagem-icon"><img class="box-imagem-icon" src="icons/chromium.png" title="Chromium" alt="Chromium"></div>
+              <div class="box-titulo">'
+DEFAULTWEB=$(xdg-settings get default-web-browser)
+#se não achar browser padrão jultar que é google-chromium
+  if [ "$DEFAULTWEB" = "chromium.desktop" ]; then
+echo '        <div id="myDivchromium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:16px; top:-5px;"><path fill="currentcolor" d="M0 256C0 
+              114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"/></svg></div>'    
+else
+echo '        <div id="myDivchromium" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:16px; top:-5px;"><path fill="currentcolor" d="M0 256C0 
+              114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"/></svg></div>'                
+  fi
+echo 'Chromium</div>
+          </button>
+        </div>'
+fi      
+
+if [ -f /usr/bin/vivaldi-stable ];then
+echo '
+        <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="">
+          <button type="button" class="box-geral-icons box-geral-button show-vivaldi" id="box-subtitle" onclick="_run(`./run-browser.run vivaldi-stable.desktop`)">
+              <div class="box-imagem-icon"><img class="box-imagem-icon" src="icons/vivaldi.png" title="Vivaldi" alt="Vivaldi"></div>
+              <div class="box-titulo">'
+DEFAULTWEB=$(xdg-settings get default-web-browser)
+#se não achar browser padrão jultar que é vivaldi
+  if [ "$DEFAULTWEB" = "vivaldi-stable.desktop" ]; then
+echo '        <div id="myDivvivaldi"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:16px; top:-5px;"><path fill="currentcolor" d="M0 256C0 
+              114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"/></svg></div>'    
+else
+echo '        <div id="myDivvivaldi" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:16px; top:-5px;"><path fill="currentcolor" d="M0 256C0 
+              114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"/></svg></div>'                
+  fi
+echo 'Vivaldi</div>
+          </button>
+        </div>'
+fi    
+
+if [ -f /usr/bin/opera ];then
+echo '
+        <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="">
+          <button type="button" class="box-geral-icons box-geral-button show-opera" id="box-subtitle" onclick="_run(`./run-browser.run opera.desktop`)">
+              <div class="box-imagem-icon"><img class="box-imagem-icon" src="icons/opera.png" title="Opera" alt="Opera"></div>
+              <div class="box-titulo">'
+DEFAULTWEB=$(xdg-settings get default-web-browser)
+#se não achar browser padrão jultar que é opera
+  if [ "$DEFAULTWEB" = "opera.desktop" ]; then
+echo '        <div id="myDivopera"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:16px; top:-5px;"><path fill="currentcolor" d="M0 256C0 
+              114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"/></svg></div>'    
+else
+echo '        <div id="myDivopera" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:16px; top:-5px;"><path fill="currentcolor" d="M0 256C0 
+              114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"/></svg></div>'                
+  fi
+echo 'Opera</div>
+          </button>
+        </div>'
 fi
         
 echo '    
         <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="">
           
           <button onclick="_run(`./run.run big-store category browser`)" id="box-subtitle" class="box-geral-icons box-geral-button"> 
-              <div class="box-imagem-icon"><img class="box-imagem-icon" src="icons/icon-big-store.png"></div>
+              <div class="box-imagem-icon"><img class="box-imagem-icon" src="icons/icon-big-store.png" title="Big Store" alt="Big Store"></div>
               <div class="box-titulo">'$"Outros navegadores"'</div>
           </button>
         </div>        
@@ -340,7 +400,7 @@ echo '
           <p class="panel__subheading">'$"O KDE Connect é um aplicativo que facilita as comunicações sem fio e a transferência de dados entre dispositivos em redes locais. Disponível na Google Play Store para Android e Apple Store para iPhone."'</p>
         </header>
        
-        <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="width:140px;">
+        <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="width:160px;">
         <img src="img/kde-connect-playstore-qrcode.svg" style="width:140px; margin: -75px;">
         </div>
         <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization">
@@ -350,7 +410,7 @@ echo '
               
           </button>
         </div>
-        <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="width:140px;">
+        <div class="box-1 box-2 box-3 box-4 box-5 box-items Personalization" style="width:160px;">
         <img src="img/kde-connect-appstore-qrcode.svg" style="width:140px; margin: -75px;">
         </div>        
       </div>

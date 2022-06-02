@@ -1,23 +1,59 @@
 
 $(document).ready(function(){
-    // Set div display to none
-    $(".hide-btn").click(function(){
+    // Set div display to Brave
+    $(".show-brave").click(function(){
         $("#myDivbrave").css("display", "block");
         $("#myDivfire").css("display", "none");
         $("#myDivchrome").css("display", "none");
+        $("#myDivchromium").css("display", "none");
+        $("#myDivvivaldi").css("display", "none");
+        $("#myDivopera").css("display", "none");
     });
     
-    // Set div display to block
-    $(".show-btn").click(function(){
+    // Set div display to Firefox
+    $(".show-fire").click(function(){
         $("#myDivbrave").css("display", "none");
         $("#myDivfire").css("display", "block");
         $("#myDivchrome").css("display", "none");
+        $("#myDivchromium").css("display", "none");
+        $("#myDivvivaldi").css("display", "none");
+        $("#myDivopera").css("display", "none");
     });
-    // Set div display to block
+    // Set div display Google Chrome
     $(".show-chrome").click(function(){
         $("#myDivbrave").css("display", "none");
         $("#myDivfire").css("display", "none");
         $("#myDivchrome").css("display", "block");
+        $("#myDivchromium").css("display", "none");
+        $("#myDivvivaldi").css("display", "none");
+        $("#myDivopera").css("display", "none");
+    });
+    // Set div display Chromium
+    $(".show-chromium").click(function(){
+        $("#myDivbrave").css("display", "none");
+        $("#myDivfire").css("display", "none");
+        $("#myDivchrome").css("display", "none");
+        $("#myDivchromium").css("display", "block");
+        $("#myDivvivaldi").css("display", "none");
+        $("#myDivopera").css("display", "none");
+    });
+    // Set div display Vivaldi
+    $(".show-vivaldi").click(function(){
+        $("#myDivbrave").css("display", "none");
+        $("#myDivfire").css("display", "none");
+        $("#myDivchrome").css("display", "none");
+        $("#myDivchromium").css("display", "none");
+        $("#myDivvivaldi").css("display", "block");
+        $("#myDivopera").css("display", "none");
+    });
+    // Set div display Opera
+    $(".show-vivaldi").click(function(){
+        $("#myDivbrave").css("display", "none");
+        $("#myDivfire").css("display", "none");
+        $("#myDivchrome").css("display", "none");
+        $("#myDivchromium").css("display", "none");
+        $("#myDivvivaldi").css("display", "none");
+        $("#myDivopera").css("display", "block");
     });
 });
 
